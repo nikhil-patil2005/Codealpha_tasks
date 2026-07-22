@@ -1,9 +1,4 @@
-# -------------------------------
-# STOCK PORTFOLIO TRACKER
-# CodeAlpha Python Internship
-# -------------------------------
 
-# Available stock prices
 stock_prices = {
     "RELIANCE": 1520,
     "TCS": 3450,
@@ -23,7 +18,7 @@ portfolio = {}
 total_investment = 0
 
 print("=" * 55)
-print("        📈 STOCK PORTFOLIO TRACKER 📈")
+print("         STOCK PORTFOLIO TRACKER ")
 print("=" * 55)
 
 print("\nAvailable Stocks")
@@ -43,23 +38,23 @@ while True:
         break
 
     if stock not in stock_prices:
-        print("❌ Stock not available. Please choose from the list.\n")
+        print(" Stock not available. Please choose from the list.\n")
         continue
 
     try:
         quantity = int(input("Enter Quantity   : "))
 
         if quantity <= 0:
-            print("❌ Quantity must be greater than 0.\n")
+            print(" Quantity must be greater than 0.\n")
             continue
 
     except ValueError:
-        print("❌ Please enter a valid number.\n")
+        print(" Please enter a valid number.\n")
         continue
 
     portfolio[stock] = portfolio.get(stock, 0) + quantity
 
-    print("✅ Stock added successfully!\n")
+    print(" Stock added successfully!\n")
 
 print("\n" + "=" * 55)
 print("            PORTFOLIO SUMMARY")
@@ -106,6 +101,6 @@ else:
         file.write("=" * 40 + "\n")
         file.write(f"Total Investment Value : ${total_investment}")
 
-    print("\n💾 Portfolio saved successfully as 'portfolio_summary.txt'")
+    print("\n Portfolio saved successfully as 'portfolio_summary.txt'")
 
-print("\nThank you for using Stock Portfolio Tracker! 😊")
+print("\nThank you for using Stock Portfolio Tracker! ")
