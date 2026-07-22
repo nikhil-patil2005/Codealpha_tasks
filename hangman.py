@@ -72,10 +72,10 @@ while wrong_guesses < max_wrong:
     guessed_letters.append(guess)
 
     if guess in word:
-        print("✅ Correct Guess!")
+        print(" Correct Guess!")
     else:
         wrong_guesses += 1
-        print("❌ Wrong Guess!")
+        print(" Wrong Guess!")
         print(f"Remaining Attempts: {max_wrong - wrong_guesses}")
 
 # Game Over
